@@ -1,0 +1,49 @@
+{% extends "blackjack/views/templates/base.html" %}
+
+
+
+
+
+
+ <div class="play-unit">
+ <h1>{% block message %}{{message}}{% endblock %} </h1>
+    <table>
+    <tr> <td>dealer total </td><td> {% block dealertotal %}{{dealertotal}}{% endblock %}          </td></tr>
+   <tr>
+    {% block dealerhand %}
+    {% for item in dealerhand %}
+    <td> {{item}} </td>
+    
+    
+    {% endfor %}
+
+{% endblock %}
+</tr>
+<tr> <td>player total </td><td> {% block playertotal %}{{playertotal}}{% endblock %}          </td></tr>
+<tr>
+
+ {% block playerhand %}
+    {% for item in playerhand %}
+    <td> {{item}} </td>
+    
+    
+    {% endfor %}
+
+{% endblock %}
+
+
+
+</tr>
+<tr><td><button onclick="window.location.href='/play'"">Reset!</button> </td></tr>
+
+    </table>
+    
+     
+ </div>
+
+
+ <div class="row-fluid">
+    <div class="span8">       
+
+    </div>
+ </div>

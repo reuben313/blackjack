@@ -1,0 +1,58 @@
+{% extends "blackjack/views/templates/base.html" %}
+
+
+
+
+
+
+ <div class="play-unit">
+ 
+ {%if over21 %} <h1> you have lost </h1>  {% endif %}
+    <table>
+    <tr> <td>dealer total </td><td> {% block dealertotal %}{{dealertotal}}{% endblock %}          </td></tr>
+   <tr>
+    {% block dealerhand %}
+    {% for item in dealerhand %}
+    <td> {{item}} </td>
+    
+    
+    {% endfor %}
+
+{% endblock %}
+</tr>
+<tr> <td>player total </td><td> {% block playertotal %}{{playertotal}}{% endblock %}          </td></tr>
+<tr>
+
+ {% block playerhand %}
+    {% for item in playerhand %}
+    <td> {{item}} </td>
+    
+    
+    {% endfor %}
+
+{% endblock %}
+
+
+
+</tr>
+<tr>
+ {%if over21 %} <td> <button onclick="window.location.href='/play'">Reset!</button>  </td> 
+ {%else%}
+ <td> <button onclick="window.location.href='/play'">Reset!</button>  </td>
+
+<td> <form name="input" action="/play" method="post"><input type="submit" value="Hit Me"></form>  </td>  
+<td> <button onclick="window.location.href='/play/stand'"">Stand</button>  </td>
+{% endif %}
+
+   </tr>
+    </table>
+    
+     <ol>  </ol>
+ </div>
+
+
+ <div class="row-fluid">
+    <div class="span8">       
+
+    </div>
+ </div>
