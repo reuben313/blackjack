@@ -97,8 +97,7 @@
 (defn reset-game []
   (reset! init-state  defualts )
   (shuffle-cards-in-deck)
-  (hit-me) (hit-dealer) (hit-me)
-  )
+  (hit-me) (hit-dealer) (hit-me))
 
 (defn get-winner[] 
   (callculate-hand (get-player-hand[])))

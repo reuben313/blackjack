@@ -1,6 +1,8 @@
-(ns blackjack.test.model
-  (:use blackjack.model)
+(ns blackjack.test.testmodel (:use blackjack.model)
   (:use clojure.test))
+
+
+  
 
 
 
@@ -12,10 +14,7 @@
   (is (= 3 (get-counter)))
   (is (= 1 (count(get-dealer-hand))))
    (is (= 2 (count(get-player-hand))))
-   (is (=  52 (count(get-cards))))
-  
-  
-  )
+   (is (=  52 (count(get-cards)))))
 
 
 (deftest hit-player-values
@@ -30,7 +29,7 @@
     (is (= 5 (get-counter)))
     (is (= 2 (count(get-dealer-hand)))))
 
-  (into  [["a" 13] ["a" 3]] [["a" 13] ["a" 12]])
+
 
 
   (deftest counting-cards
@@ -42,13 +41,12 @@
        (is (= 21 (callculate-hand AAA)))
          (is (= 16 (callculate-hand (into  KN AAA))))
              (is (= 24 (callculate-hand (into  KN AA))))
-             (is (= 4 (callculate-hand (into  A AAA))))
-           ))
+             (is (= 4 (callculate-hand (into  A AAA))))))
 
 
 
 
-(counting-cards)
+
 
 
 
