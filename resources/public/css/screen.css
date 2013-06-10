@@ -1,5 +1,5 @@
 body {	
-    background-color: green;
+    background-image url(img/blacky.jpg);
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -68,5 +68,13 @@ h1 {
 	  border-radius: 25px ;
     
 	
+	
+}
+
+.play-content 
+{
+	
+	  
+	   margin-left: 200px;
 	
 }

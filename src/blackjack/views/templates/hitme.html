@@ -8,7 +8,7 @@
  <div class="play-unit">
  
  {%if over21 %} <h1> you have lost </h1>  {% endif %}
-    <table>
+    <table class="play-content">
     <tr> <td>dealer total </td><td> {% block dealertotal %}{{dealertotal}}{% endblock %}          </td></tr>
    <tr>
     {% block dealerhand %}

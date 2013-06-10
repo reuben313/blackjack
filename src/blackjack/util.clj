@@ -32,7 +32,7 @@
 
 (defn over-or-equal-21? [num] 
   
-  (>= num 21 )
+  (>= num 22 )
   
   )
   
