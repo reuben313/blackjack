@@ -79,13 +79,13 @@
             (if(zero? countoface )0 
               (+ (if(= 1 countoface) (if(> (+ sumofKQJ sumOfNormalCards 10) 21 ) 1 10) 
                     (if(= 2 countoface) (if(< (+ sumofKQJ sumOfNormalCards 11) 21) (if(= (+ sumofKQJ sumOfNormalCards) 0)20 2) 11) 
-                      (if(= 3 countoface) 3  
+                      (if(= 3 countoface)(if(= (+ sumofKQJ sumOfNormalCards) 0)21 3) 
                         (if(= 4 countoface) 4)))))))))))
  
  (defn is-valid-hand? [hand]
   (<= (callculate-hand hand) 21))
  
- 
+
 (defn dealer-total []
  (callculate-hand (:dealer-hand (get-mock-data))))
 
